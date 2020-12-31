@@ -6,7 +6,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/vamsijakkula/hellowhale.git', branch:'master'
+        git url:'https://github.com/mbelbma/hellowhale.git', branch:'master'
       }
     }
     
@@ -33,7 +33,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "KubeS2")
         }
       }
     }
