@@ -21,7 +21,7 @@ pipeline {
       stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://labs.bmait.com/nexus/repository/BmaDockerRepo/', 'dockerhub') {
+                    docker.withRegistry('https://labs.bmait.com/nexus/repository/BmaDockerRepo/','dockerhub') {
                             myapp.push("latest")
                             myapp.push("${env.BUILD_ID}")
                     }
