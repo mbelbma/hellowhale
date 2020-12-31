@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: mbel91/hellowhale:latest
+        image: mbel91/sourcing11:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
