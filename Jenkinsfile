@@ -1,11 +1,6 @@
 pipeline {
 
-  agent {
-    kubernetes {
-      label 'kubetest'  // all your pods will be named with this prefix, followed by a unique id
-      idleMinutes 5  // how long the pod will live after no jobs have run on i
-    }
-  }
+agent any 
 
   stages {
 
@@ -38,7 +33,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: 'nginx.yaml',kubeconfigId: 'kubeconfig')
+          kubernetesDeploy(configs: 'hellowhale.yml',kubeconfigId: 'kubeconfig')
         }
       }
     }
