@@ -13,7 +13,7 @@ agent any
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("mbel91/hellowhale:${env.BUILD_ID}")
+                    myapp = docker.build("mbel91/totoxxx:${env.BUILD_ID}")
                 }
             }
         }
